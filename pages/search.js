@@ -1,14 +1,11 @@
 import {useState} from 'react';
 import tw from 'tailwind-styled-components'
 import Link from 'next/link'
-<<<<<<< HEAD
 
 const Search = () => {
 
   const [pickupPoint, setPickupPoint]=useState("");
   const [dropoffPoint, setDropoffPoint]=useState("");
-=======
->>>>>>> 7e63fc39ce4011016cd101e40d8a9f5c40af9ab3
 
   return (
        
