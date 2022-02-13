@@ -1,6 +1,7 @@
 import React from 'react';
 import tw from 'tailwind-styled-components'
-import Link from 'next/Link'
+import L
+Link from 'next/link'
 
 const search = () => {
   return (
