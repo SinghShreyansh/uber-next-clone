@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'tailwind-styled-components'
-import {carList} from '../data/carList'
+import {carListData} from '../data/carList'
 
 const RideSelector = () => {
 
@@ -11,7 +11,7 @@ const RideSelector = () => {
                     Choose a ride, or swipe up for more
                 </RideSelectorTitle>
                      <RideSelectorItems>
-                     {  carList.map((car,  index)=> (
+                     {  carListData.map((car,  index)=> (
 
                          <RideSelectorItem key = {index} >  
                              <CarImage 

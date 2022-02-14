@@ -1,4 +1,4 @@
-export const carList = [
+export const carListData = [
     {
       imgUrl:  'https://i.ibb.co/cyvcpfF/uberx.png',
       service: 'UberX',
@@ -26,5 +26,13 @@ export const carList = [
     }
     
 ]
+
+import React from 'react'
+
+const carList = () => {
+  return (
+    <div>hello</div>
+  )
+}
 
 export default carList
