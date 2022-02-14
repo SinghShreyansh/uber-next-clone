@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MapBelow = () => {
     return (
         <>
             {/* Header */}
-            <div className="flex justify-between border-t-2">
+            <div className="flex justify-between border-t-2 p-x-2">
                 {/* uberlogo */}
-                <img className="w-20 h-20 object-contain ml-4 " src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" alt="../" />
+                <Image  src="/asset/uber-technologies-new-20218114.jpg" alt="../" height="100" width="70" objectFit="contain" />
 
                 {/* Profile */}
                 <div className="flex mt-5 pr-3">
@@ -27,18 +28,18 @@ const MapBelow = () => {
 
                 <Link href="/search">
                     <div className="bg-gray-300 mr-2 flex-1 h-44 lg:mr-5 flex flex-col justify-center rounded-lg transform hover:scale-105 cursor-pointer">
-                        <img className="object-contain h-3/5 " src="https://i.ibb.co/cyvcpfF/uberx.png" alt="../" />
+                        <Image src="/asset/uberx.png" alt="../" height="100" width="70" objectFit="contain" />
                         <p className="text-center text-lg font-bold ">Ride</p>
                     </div>
                 </Link>
 
                 <div className="bg-gray-300 mr-2 flex-1 h-44 lg:mr-5 flex flex-col justify-center rounded-lg transform hover:scale-105 cursor-pointer">
-                    <img className="object-contain h-3/5 " src="https://i.ibb.co/n776JLm/bike.png" alt="../" />
+                    <Image className="object-contain h-3/5 " src="/asset/bike.png" alt="../" width="100" height="100" />
                     <p className="text-center text-lg font-bold ">Wheels</p>
                 </div>
 
                 <div className="bg-gray-300 mr-2 flex-1 h-44 flex flex-col justify-center rounded-lg transform hover:scale-105 cursor-pointer">
-                    <img className="object-contain h-3/5 " src="https://i.ibb.co/5RjchBg/uberschedule.png" alt="../" />
+                    <Image src="/asset/uberschedule.png" alt="../" height="100" width="100" objectFit="contain" />
                     <p className="text-center text-lg font-bold ">Reserve</p>
                 </div>
 

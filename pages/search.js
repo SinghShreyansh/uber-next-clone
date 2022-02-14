@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import tw from 'tailwind-styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Search = () => {
 
@@ -13,16 +14,16 @@ const Search = () => {
         {/* Button Container */}
         <Link href='./' passHref>
         <ButtonContainer>
-            <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+            <BackButton src="/asset/left.png"/>
         </ButtonContainer>
         </Link>
 
         {/* Input Container */}
         <InputContainer>
           <FromtoIcons>
-              <Circle src="https://img.icons8.com/ios-filled/50/9CA3AF/filled-circle.png" />
-              <Line src="https://img.icons8.com/ios/50/9CA3AF/vertical-line.png" />
-              <Square src="https://img.icons8.com/windows/50/000000/square-full.png" />
+              <Circle src="/asset/filled-circle.png" />
+              <Line src="/asset/vertical-line.png" />
+              <Square src="/asset/square-full.png" />
           </FromtoIcons>
           <InputBoxes>
             <Input value={pickupPoint} onChange={(e)=>setPickupPoint(e.target.value)} placeholder='Enter pickup location' />
@@ -30,13 +31,13 @@ const Search = () => {
             
           </InputBoxes>
         
-          <PlusButton src="https://img.icons8.com/ios/50/000000/plus-math.png" />
+          <PlusButton src="/asset/plus-math.png" />
 
         </InputContainer>
 
         {/* Saved Container */}
         <SavedPlaces>
-             <StarIcon src="https://img.icons8.com/ios-filled/50/ffffff/star--v1.png"  />
+             <StarIcon src="/asset/star--v1.png"  />
              Saved Places
         </SavedPlaces>
         {/* Confirm Location */}
