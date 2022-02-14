@@ -2,12 +2,14 @@ import React,{ useEffect,useState } from 'react';
 import tw from 'tailwind-styled-components'
 import Map from './components/Map'
 import {useRouter} from 'next/router'
+import RideSelector from './components/RideSelector';
+import Link from 'next/link'
 
-const confirm = () => {
+const Confirm = () => {
     // receiving data from search tab
     const router = useRouter();
 
-    const {pickup,dropoff}= router.query
+    const {pickup,dropoff}= router.query;
 
 
     // Declaring state
@@ -42,64 +44,16 @@ const confirm = () => {
     <Wrapper>
       <Mapcomponent>
           <Map fromLocation={pickupCordinates} toLocation={dropoffCordinates}/>
+
+          <Link href="/search" passHref>
+          <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png" />
+          </Link>
       </Mapcomponent>
 
       <RideContainer>
-          <RideSelector>
-            <RideSelectorTitle>
-                Choose a ride, or swipe up for more
-            </RideSelectorTitle>
-            <RideSelectorItems>
-                {/* UberX */}
-                <RideSelectorItem>
-                    <CarImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
-                    <CarDetail>
-                    <CarName>UberX</CarName>
-                    <TimeDistance>5 min away</TimeDistance>
-                    </CarDetail>
-                    <CarFare>
-                        $20.50
-                    </CarFare>
-                </RideSelectorItem>
-
-                {/* UberXL */}
-                <RideSelectorItem>
-                    <CarImage src="https://i.ibb.co/YDYMKny/uberxl.png" />
-                    <CarDetail>
-                    <CarName>UberXL</CarName>
-                    <TimeDistance>5 min away</TimeDistance>
-                    </CarDetail>
-                    <CarFare>
-                        $30.50
-                    </CarFare>
-                </RideSelectorItem>
-                {/* UberXL */}
-                <RideSelectorItem>
-                    <CarImage src="https://i.ibb.co/YDYMKny/uberxl.png" />
-                    <CarDetail>
-                    <CarName>UberXL</CarName>
-                    <TimeDistance>5 min away</TimeDistance>
-                    </CarDetail>
-                    <CarFare>
-                        $30.50
-                    </CarFare>
-                </RideSelectorItem>
-                {/* UberXL */}
-                <RideSelectorItem>
-                    <CarImage src="https://i.ibb.co/YDYMKny/uberxl.png" />
-                    <CarDetail>
-                    <CarName>UberXL</CarName>
-                    <TimeDistance>5 min away</TimeDistance>
-                    </CarDetail>
-                    <CarFare>
-                        $30.50
-                    </CarFare>
-                </RideSelectorItem>
-            </RideSelectorItems>
-          </RideSelector>
-          <ConfirmButton>
-
-          </ConfirmButton>
+        <RideSelector/>
+ 
+          <ConfirmButton type="button">Confirm UberX</ConfirmButton>
 
       </RideContainer>
 
@@ -107,33 +61,17 @@ const confirm = () => {
   );
 }
 
-export default confirm;
+export default Confirm;
 
 
 const Wrapper = tw.div``
 
-const Mapcomponent = tw.div``
+const Mapcomponent = tw.div`relative`
 
-const RideContainer = tw.div``
+const BackButton = tw.img`absolute top-0 left-0 ml-2 cursor-pointer rounded-full hover:border-2`
 
-const  RideSelector = tw.div``
+const RideContainer = tw.div`flex flex-col`
 
-const ConfirmButton = tw.div``
-
-const RideSelectorTitle = tw.p`
-text-center text-gray-500 text-sm font-semibold my-2`
-
-const RideSelectorItems = tw.div`
-h-[37vh] bg-gray-200 border-y-2 border-gray-200 overflow-y-scroll scroll-smooth`
-
-const RideSelectorItem = tw.div`
-flex items-center border-2`
-
-const CarImage = tw.img`
-h-20 ml-2`
-
-const CarDetail = tw.div`flex-1 flex flex-col justify-evenly ml-4`
-
-const CarName = tw.p`font-bold text-lg`
-const TimeDistance = tw.p`font-semibold text-blue-600`
-const CarFare = tw.p`font-semibold text-xl mr-4`
+const ConfirmButton = tw.button`flex-0.1 w-[96%]
+text-white bg-gray-900 h-[7vh] hover:bg-gray-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mx-[2%] my-[1%]
+`
