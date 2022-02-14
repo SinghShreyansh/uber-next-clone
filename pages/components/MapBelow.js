@@ -25,7 +25,7 @@ const MapBelow = () => {
 
             <div className="flex justify-between mr-5 ml-5 sm:mr-10 sm:ml-10">
 
-                <Link href="/search">
+                <Link href="/search" passHref>
                     <div className="bg-gray-300 mr-2 flex-1 h-44 lg:mr-5 flex flex-col justify-center rounded-lg transform hover:scale-105 cursor-pointer">
                         <img className="object-contain h-3/5 " src="https://i.ibb.co/cyvcpfF/uberx.png" alt="../" />
                         <p className="text-center text-lg font-bold ">Ride</p>
