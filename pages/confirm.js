@@ -75,6 +75,3 @@ const RideContainer = tw.div`flex flex-col`
 const ConfirmButton = tw.button`flex-0.1 w-[96%]
 text-white bg-gray-900 h-[7vh] hover:bg-gray-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mx-[2%] my-[1%]
 `
-const CarName = tw.p`font-bold text-lg`
-const TimeDistance = tw.p`font-semibold text-blue-600`
-const CarFare = tw.p`font-semibold text-xl mr-4`
