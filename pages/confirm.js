@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components'
 import Map from './components/Map'
 import {useRouter} from 'next/router'
 
-const confirm = () => {
+const Confirm = () => {
     // receiving data from search tab
     const router = useRouter();
 
@@ -107,7 +107,7 @@ const confirm = () => {
   );
 }
 
-export default confirm;
+export default Confirm;
 
 
 const Wrapper = tw.div``
